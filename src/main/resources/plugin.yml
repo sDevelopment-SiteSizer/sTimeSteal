@@ -1,0 +1,25 @@
+name: sTimeSteal
+version: '${project.version}'
+main: me.sitesizer.stimesteal.STimeSteal
+api-version: 1.21
+authors: [SiteSizer]
+description: sTimeSteal is a hardcore survival plugin where time acts as health and currency. Steal minutes via PvP, trade with others, or face elimination. Features complete economy with withdrawable vouchers and revival.
+softdepend: [Citizens]
+permissions:
+  stimesteal.revive:
+    description: Allow reviving players
+    default: op
+  stimesteal.admin:
+    description: Admin commands for sTimeSteal
+    default: op
+commands:
+  withdraw:
+    description: Withdraw time into a voucher
+    usage: /withdraw <minutes>
+  stimesteal:
+    description: Main admin command
+    usage: /stimesteal <subcommand>
+    permission: stimesteal.admin
+  paytime:
+    description: Send time to another player
+    usage: /paytime <player> <minutes>

@@ -1,0 +1,16 @@
+revive-beacon:
+  enabled: true
+  result:
+    material: BEACON
+    name: "<gold><italic:false>Revive Beacon"
+    lore:
+      - "<gray><italic:false>Place this beacon to"
+      - "<gray><italic:false>summon the revival altar."
+  recipe:
+    shape:
+      - "O O"
+      - " N "
+      - "O O"
+    ingredients:
+      O: OBSIDIAN
+      N: NETHER_STAR

@@ -1,0 +1,53 @@
+# sTimeSteal Configuration
+# Times are described in MINUTES.
+# 1 minute = 60 seconds
+# 60 minutes = 1 hour
+
+# Time given to new players (Default: 360 minutes = 6 hours)
+starting-time: 360
+
+# Time stolen from a victim when killed by a player (Default: 60 minutes = 1 hour)
+kill-steal-time: 60
+
+# Time lost when dying to natural causes (mobs, fall, etc.) (Default: 10 minutes)
+death-loss-time: 10
+
+# Time set when a player is revived (Default: 360 minutes = 6 hours)
+# If set to -1, it will restore them to 'starting-time'.
+revive-time: 360
+
+# Maximum time a player can have (Default: 2880 minutes = 48 hours, set to -1 for unlimited)
+max-time: -1
+
+# Time Status Effects (Buffs/Debuffs)
+# Apply potion effects when a player has low or high time.
+status-effects:
+  enabled: true
+  # Effects for low time (< 1 hour)
+  low-time:
+    threshold: 60 # Minutes
+    effects:
+      - SLOWNESS
+  # Effects for high time (> 24 hours)
+  high-time:
+    threshold: 1440 # Minutes
+    effects:
+      - SPEED
+
+# Item Settings
+voucher:
+  material: PAPER
+  name: "<green>Time Voucher <gray>(Right Click)"
+  lore:
+    - "<gray>Value: <yellow>%time%"
+    - "<gray>Right-click to redeem."
+
+# Message Settings
+messages:
+  time-expired: "<red>TIME EXPIRED"
+  time-expired-subtitle: "<gray>You have run out of time."
+  revived-title: "<green>REVIVED"
+  revived-subtitle: "<gray>Do not waste your breath."
+  voucher-redeemed: "<green>You redeemed a voucher for <yellow>%time%<green>!"
+  voucher-given: "<green>You created a voucher for <yellow>%time%<green>."
+  insufficient-time: "<red>You do not have enough time to withdraw that amount."
