@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="logo.png" alt="sTimeSteal Logo" width="200"/>
   <h1>sTimeSteal</h1>
   <p>
     <strong>Time is your Life. Time is your Money.</strong>
